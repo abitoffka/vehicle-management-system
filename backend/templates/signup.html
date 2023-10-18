@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class="bg-gray-100">
+    <div id="wrapper">
+        <b><h1 style="font-size: 1.5rem;">VMS</h1></b>
+        <div>
+            <h1> Sign Up</h1>
+            {% for message in messages %}
+            <h5 style="color: red;">{{message}}</h5>
+            {% endfor %}
+            
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="text" name="username" placeholder="Username" style="border: 1px solid #d3d5d8 !important;">
+                <input type="text" name="email" placeholder="Email" style="border: 1px solid #d3d5d8 !important;">
+                <input type="password" name="password" placeholder="Password" style="border: 1px solid #d3d5d8 !important;">
+                <input type="password" name="password2" placeholder="Confirm Password" style="border: 1px solid #d3d5d8 !important;">
+                <button type="submit">Sign UP</button>
+                <p class="text-base"> Do you have an account? <a href="/signin"> Sign In  </a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+</html>
